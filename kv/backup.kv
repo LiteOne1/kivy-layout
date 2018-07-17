@@ -1,0 +1,52 @@
+#:kivy 1.10.0
+
+
+<Film>:
+    FloatLayout:
+        canvas.before: 
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        
+      
+        Button:
+            text: 'Button 1'
+            size_hint: 0.1, 0.05
+            max_size: 
+            background_color: 1,0,1,1
+            pos_hint: {'x': 0, 'y':0.85}
+
+        TextInput:
+            id: 'search'
+            padding_top: (30, 'px')
+            hint_text: 'Search'
+            font_size: self.height / 2.2
+            size_hint: 0.2, 0.04
+            pos_hint: {'x': 0, 'y': 0.9}
+            focus_on_touch: True
+            multiline: False
+            on_text_validate: 
+        Button:
+            text: 'Button 12'
+            font_size: self.height / 2
+            size_hint: 0.1, 0.05
+            background_color: 1,0,1,1
+            pos_hint: {'x': 0.1, 'y':0.85}
+
+        BoxLayout:
+            cols: 3
+            rows: 4
+            Label:
+                id: film_name
+                text: 'Film Name'
+                font_size: self.height / 1.2
+                background_color: 0,1,0,1
+                size_hint: 0.3, 0.05
+                pos_hint: {'x': .0, 'y':0.85}
+                color: 0,0,1,1
+        
+            Label:
+                id: rating
+                text: 'Rating'
+                font_size: self.height / 1.2
+                color: 1,0,0,1
