@@ -1,7 +1,6 @@
 #:kivy 1.10.0
 
 <Film>:
-
     BoxLayout:
         orientation: 'vertical'
         padding: "10dp"
@@ -19,13 +18,16 @@
                     size_hint_x: 1
                     size_hint_y: root.size_hint_y/1.9
             Button:
-                text: ' B 3'
+                text: 'B 3'
                 size_hint_x: 4
         BoxLayout:
             size_hint_y: 600
-            Button:
+            Label:
+                id: movie_description
+                color: 1,0,0,1
+                text: "B 4"
                 size_hint_x: 2
-            Button:
+            Button: 
                 size_hint_x: 0.5
 
       

@@ -7,13 +7,24 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.pagelayout import PageLayout
 from kivy.uix.scatterlayout import ScatterLayout
 from kivy.uix.stacklayout import StackLayout
+from engine.grab import get_synopsis, soup
 
 
 
 Builder.load_file('kv/layout.kv')
 
-class Film(StackLayout):
-    pass
+
+
+
+
+class Film(BoxLayout):
+    def get_syn(self): 
+        x = get_synopsis(soup)
+        self.ids.movie_description.text = x
+
+
+
+
 
 class FilmApp(App):
     def build(self):
