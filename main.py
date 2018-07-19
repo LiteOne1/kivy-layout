@@ -7,23 +7,16 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.pagelayout import PageLayout
 from kivy.uix.scatterlayout import ScatterLayout
 from kivy.uix.stacklayout import StackLayout
-from engine.grab import get_synopsis, soup
+from engine.grab import get_synopsis, soup # import from external py file
 
 
-
-Builder.load_file('kv/layout.kv')
-
-
-
+Builder.load_file('kv/layout.kv')# load external kv file
 
 
 class Film(BoxLayout):
     def get_syn(self): 
         x = get_synopsis(soup)
         self.ids.movie_description.text = x
-
-
-
 
 
 class FilmApp(App):
