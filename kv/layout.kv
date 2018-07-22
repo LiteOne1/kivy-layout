@@ -2,7 +2,7 @@
 
 <Film>:
     BoxLayout:
-        orientation: 'vertical'
+        orientation: 'vertical' 
         padding: "10dp"
         BoxLayout:
             size_hint_y: 200
@@ -17,18 +17,40 @@
                     text: 'B 2'
                     size_hint_x: 1
                     size_hint_y: root.size_hint_y/1.9
+                    on_press: root.get_syn()
             Button:
                 text: 'B 3'
                 size_hint_x: 4
         BoxLayout:
+            orientation: 'horizontal'
             size_hint_y: 600
-            Label:
-                id: movie_description
-                color: 1,0,0,1
-                text: "B 4"
-                size_hint_x: 2
-            Button: 
-                size_hint_x: 0.5
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_x: 0.2
+                Button:
+                    
+                    size_hint_x: 1
+                    text_size: self.size
+                    font_size: dp(20)         
+                    text: 'B 4'
+                Button:
+                    id: cast
+                    size_hint_x: 1
+                    text_size: self.size
+                    size_hint_y: 1
+                    text: 'B 5'
+            BoxLayout:
+                size_hint_x: 0.8
+                orientation:'vertical'
+                Button:
+                    id: synopsis
+                    text_size: self.size
+                    color: 1,1,1,1
+                    text: "B 6"
+                    font_size: sp(12)
+                    
+            
+
 
       
         
